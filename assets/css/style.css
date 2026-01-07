@@ -1040,6 +1040,24 @@ body::-webkit-scrollbar-thumb:hover {
   gap: 2px;
 }
 
+/* Fix star color in featured products */
+.product-grid .showcase-rating {
+  color: var(--sandy-brown) !important;
+}
+
+.product-grid .showcase-rating ion-icon {
+  color: inherit !important;
+}
+
+/* Make sure best seller sidebar stars are yellow too */
+.sidebar .showcase-rating {
+  color: var(--sandy-brown);
+}
+
+.sidebar .showcase-rating ion-icon {
+  color: inherit;
+}
+
 /*-----------------------------------*\
   #PRODUCT LISTING IMPROVEMENTS
 \*-----------------------------------*/
@@ -2505,161 +2523,5 @@ body::-webkit-scrollbar-thumb:hover {
 
   .related-products .product-grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/*-----------------------------------*\
-  #SEARCH FUNCTIONALITY
-\*-----------------------------------*/
-
-/* Search form in header */
-.search-form {
-  position: relative;
-  width: 100%;
-}
-
-.search-results-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid var(--cultured);
-  border-radius: var(--border-radius-md);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-height: 400px;
-  overflow-y: auto;
-  z-index: 1000;
-  display: none;
-  margin-top: 5px;
-}
-
-.search-results-dropdown.active {
-  display: block;
-}
-
-.search-result-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  border-bottom: 1px solid var(--cultured);
-  text-decoration: none;
-  transition: var(--transition-timing);
-}
-
-.search-result-item:hover {
-  background: rgba(95, 168, 86, 0.05);
-}
-
-.search-result-item:last-child {
-  border-bottom: none;
-}
-
-.search-result-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
-  flex-shrink: 0;
-  background: var(--cultured);
-  border-radius: var(--border-radius-sm);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search-result-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.search-result-info {
-  flex-grow: 1;
-  min-width: 0;
-}
-
-.search-result-title {
-  font-size: var(--fs-7);
-  font-weight: var(--weight-600);
-  color: var(--secondary-color);
-  margin-bottom: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.search-result-category {
-  font-size: var(--fs-10);
-  color: var(--primary-color);
-  text-transform: uppercase;
-  font-weight: var(--weight-500);
-  margin-bottom: 2px;
-}
-
-.search-result-price {
-  font-size: var(--fs-7);
-  font-weight: var(--weight-700);
-  color: var(--primary-color);
-}
-
-.search-result-old-price {
-  font-size: var(--fs-9);
-  color: var(--sonic-silver);
-  text-decoration: line-through;
-  margin-left: 5px;
-}
-
-.search-view-all {
-  padding: 12px 15px;
-  border-top: 1px solid var(--cultured);
-  text-align: center;
-}
-
-.search-view-all a {
-  color: var(--primary-color);
-  font-size: var(--fs-7);
-  font-weight: var(--weight-600);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.search-view-all a:hover {
-  text-decoration: underline;
-}
-
-.search-no-results {
-  padding: 30px 20px;
-  text-align: center;
-  color: var(--sonic-silver);
-}
-
-.search-no-results ion-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: var(--cultured);
-}
-
-.search-suggestion {
-  font-size: var(--fs-9);
-  margin-top: 10px;
-  color: var(--spanish-gray);
-}
-
-/* Mobile adjustments for search */
-@media (max-width: 768px) {
-  .search-results-dropdown {
-    position: fixed;
-    top: 70px;
-    left: 15px;
-    right: 15px;
-    max-height: 300px;
-  }
-  
-  .header-search-container {
-    position: static;
   }
 }
