@@ -1,0 +1,84 @@
+<!-- components/header.html -->
+<header>
+  <div class="header-top">
+    <div class="container"></div>
+  </div>
+
+  <div class="header-main">
+    <div class="container">
+      <a href="index.html" class="header-logo">
+        <img src="./assets/images/logo.png" alt="JL's logo" width="120" height="36">
+      </a>
+
+      <div class="header-search-container">
+        <input type="search" name="search" class="search-field" placeholder="Search products...">
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="header-user-actions">
+        <button class="action-btn" id="cart-btn">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+          <span class="count">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="desktop-navigation-menu">
+    <div class="container">
+      <ul class="desktop-menu-category-list">
+        <li class="menu-category">
+          <a href="index.html" class="menu-title">Home</a>
+        </li>
+        <li class="menu-category">
+          <a href="iphone.html" class="menu-title">iPhone</a>
+        </li>
+        <li class="menu-category">
+          <a href="ipad.html" class="menu-title">iPad</a>
+        </li>
+        <li class="menu-category">
+          <a href="mac.html" class="menu-title">Mac</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="mobile-bottom-navigation">
+    <button class="action-btn" data-mobile-menu-open-btn>
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
+    <button class="action-btn" id="mobile-cart-btn">
+      <ion-icon name="bag-handle-outline"></ion-icon>
+      <span class="count">0</span>
+    </button>
+    <button class="action-btn" onclick="window.location.href='index.html'">
+      <ion-icon name="home-outline"></ion-icon>
+    </button>
+    <button class="action-btn">
+      <ion-icon name="heart-outline"></ion-icon>
+      <span class="count">0</span>
+    </button>
+  </div>
+
+  <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+    <div class="menu-top">
+      <h2 class="menu-title">Menu</h2>
+      <button class="menu-close-btn" data-mobile-menu-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <ul class="mobile-menu-category-list">
+      <li class="menu-category">
+        <a href="iphone.html" class="menu-title">iPhone</a>
+      </li>
+      <li class="menu-category">
+        <a href="ipad.html" class="menu-title">iPad</a>
+      </li>
+      <li class="menu-category">
+        <a href="mac.html" class="menu-title">Mac</a>
+      </li>
+    </ul>
+  </nav>
+</header>
