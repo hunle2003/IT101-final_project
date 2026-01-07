@@ -35,127 +35,12 @@
   <!-- MAIN  -->
   <main>
     <div class="product-container">
-
       <div class="container">
-
         <div class="product-box">
           <div class="product-main">
-            <h2 class="title">IPAD</h2>
-
-            <div class="product-grid">
-
-              <div class="showcase">
-                <div class="showcase-banner">
-                  <img src="./assets/images/IPAD/ipad_pro.jpg" alt="iPad Pro 12.9-inch" class="product-img" width="300">
-                  <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="repeat-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
-                    </button>
-                  </div>
-                </div>
-                <div class="showcase-content">
-                  <a href="#" class="showcase-category">iPad</a>
-                  <h3>
-                    <a href="#" class="showcase-title">iPad Pro 12.9-inch</a>
-                  </h3>
-                  <div class="showcase-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <div class="price-box">
-                    <p class="price">₱65,990</p>
-                    <del>₱69,990</del>
-                  </div>
-                </div>
-              </div>
-
-              <div class="showcase">
-                <div class="showcase-banner">
-                  <img src="./assets/images/IPAD/ipad.jpg" alt="iPad 10th Gen" class="product-img" width="300">
-                  <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="repeat-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
-                    </button>
-                  </div>
-                </div>
-                <div class="showcase-content">
-                  <a href="#" class="showcase-category">iPad</a>
-                  <h3>
-                    <a href="#" class="showcase-title">iPad 10th Gen</a>
-                  </h3>
-                  <div class="showcase-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <div class="price-box">
-                    <p class="price">₱32,990</p>
-                    <del>₱36,990</del>
-                  </div>
-                </div>
-              </div>
-
-              <div class="showcase">
-                <div class="showcase-banner">
-                  <img src="./assets/images/IPAD/ipad_prom4.jpg" alt="iPad Pro M4" class="product-img" width="300">
-                  <p class="showcase-badge angle black">Sale</p>
-                  <div class="showcase-actions">
-                    <button class="btn-action">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="repeat-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
-                    </button>
-                  </div>
-                </div>
-                <div class="showcase-content">
-                  <a href="#" class="showcase-category">iPad</a>
-                  <h3>
-                    <a href="#" class="showcase-title">iPad Pro M4</a>
-                  </h3>
-                  <div class="showcase-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                  </div>
-                  <div class="price-box">
-                    <p class="price">₱75,990</p>
-                    <del>₱82,990</del>
-                  </div>
-                </div>
-              </div>
-
+            <h2 class="title">iPad</h2>
+            <div class="product-grid" id="product-grid">
+              <!-- JavaScript will populate iPhone products here -->
             </div>
           </div>
         </div>
@@ -163,15 +48,19 @@
     </div>
   </main>
 
+
   <!-- FOOTER  -->
   <div id="footer-container"></div>
 
   <!-- SCRIPTS -->
-  <script src="./assets/js/script.js"></script>
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initProductRendering();
+    });
+  </script>
 
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
