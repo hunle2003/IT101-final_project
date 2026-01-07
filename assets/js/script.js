@@ -208,7 +208,7 @@ function generateProductHTML(product) {
         ${product.badge ? `<p class="showcase-badge ${product.badge === 'Sale' ? 'angle black' : ''}">${product.badge}</p>` : ''}
         <div class="showcase-actions">
           <button class="btn-action">
-            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="bag-add-outline"></ion-icon>
           </button>
           <button class="btn-action" onclick="window.location.href='product-details.html?id=${product.id}'">
             <ion-icon name="eye-outline"></ion-icon>

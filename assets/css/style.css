@@ -990,13 +990,6 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--eerie-black);
 }
 
-.product-grid .showcase-rating {
-  display: flex;
-  color: var(--sandy-brown);
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
 .product-grid .price-box {
   display: flex;
   gap: 10px;
@@ -1015,6 +1008,107 @@ body::-webkit-scrollbar-thumb:hover {
 .product-grid del {
   color: var(--sonic-silver);
   font-size: var(--fs-8);
+}
+
+/*-----------------------------------*\
+  #STAR RATING FIX
+\*-----------------------------------*/
+
+/* Fix for star ratings - display stars horizontally */
+.showcase-rating ion-icon,
+.product-rating .stars ion-icon {
+  display: inline !important;
+}
+
+/* Ensure star ratings display in a row */
+.showcase-rating,
+.product-rating .stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Fix for sidebar star ratings */
+.sidebar .showcase-rating ion-icon {
+  display: inline !important;
+}
+
+/* Make sure all rating stars are horizontal */
+.product-grid .showcase-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/*-----------------------------------*\
+  #PRODUCT LISTING IMPROVEMENTS
+\*-----------------------------------*/
+
+/* Hide heart and repeat buttons from product listings */
+.product-grid .showcase-actions .btn-action:nth-child(1),
+.product-grid .showcase-actions .btn-action:nth-child(3) {
+  display: none !important;
+}
+
+/* Adjust spacing for remaining buttons */
+.product-grid .showcase-actions {
+  gap: 5px;
+}
+
+/* Hide heart from mobile bottom navigation on tablet size */
+@media (max-width: 1024px) {
+  .mobile-bottom-navigation .action-btn:nth-child(2) {
+    display: none !important;
+  }
+  
+  /* Adjust spacing for remaining mobile navigation buttons */
+  .mobile-bottom-navigation {
+    justify-content: space-evenly;
+  }
+  
+  .mobile-bottom-navigation .action-btn {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* Remove heart icon from header on mobile/tablet */
+@media (max-width: 768px) {
+  .header-actions .btn-user {
+    display: none !important;
+  }
+  
+  .header-actions {
+    gap: 15px;
+  }
+}
+
+/* Ensure only eye and bag buttons show in product actions */
+.product-grid .showcase-actions .btn-action {
+  width: 35px;
+  height: 35px;
+}
+
+/* Hide wishlist button from product details page on mobile */
+@media (max-width: 768px) {
+  .wishlist-btn {
+    display: none !important;
+  }
+  
+  .add-to-cart-btn {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* Remove heart from sidebar product listings */
+.sidebar .showcase-actions {
+  display: none !important;
+}
+
+/* Hide heart from product details page actions */
+.product-actions .wishlist-btn {
+  display: none !important;
 }
 
 /*-----------------------------------*\
@@ -1382,8 +1476,6 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-
-
 /* Product Details Page Styles */
 .product-detail-container {
   display: flex;
@@ -1671,9 +1763,7 @@ body::-webkit-scrollbar-thumb:hover {
   top: 10px;
   right: 10px;
   z-index: 10;
-  /* Ensure buttons are above the link */
 }
-
 
 /*-----------------------------------*\
   #CART PAGE
@@ -2038,41 +2128,10 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--secondary-color);
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 30px;}
-/* Add to style.css */
-
-
-/*-----------------------------------*\
-  #STAR RATING FIX
-\*-----------------------------------*/
-
-/* Fix for star ratings - display stars horizontally */
-.showcase-rating ion-icon,
-.product-rating .stars ion-icon {
-  display: inline !important;
-  /* Override the block display from reset */
+  margin-bottom: 30px;
 }
 
-/* Ensure star ratings display in a row */
-.showcase-rating,
-.product-rating .stars {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-/* Fix for sidebar star ratings */
-.sidebar .showcase-rating ion-icon {
-  display: inline !important;
-}
-
-/* Make sure all rating stars are horizontal */
-.product-grid .showcase-rating {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
+/* Additional styles */
 .product-headline {
   color: var(--sonic-silver);
   font-size: var(--fs-6);
@@ -2081,7 +2140,6 @@ body::-webkit-scrollbar-thumb:hover {
   line-height: 1.4;
 }
 
-/* Add to style.css if not already there */
 .loading {
   text-align: center;
   padding: 50px;
@@ -2122,7 +2180,6 @@ body::-webkit-scrollbar-thumb:hover {
 /* Fix for Product Details Page - Remove sidebar layout */
 .product-details-page .container {
   display: block !important;
-  /* Override flex layout */
 }
 
 .product-details-page .product-container {
@@ -2168,8 +2225,6 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100% !important;
   min-width: 100% !important;
 }
-
-
 
 /* Fix the main container - remove sidebar layout */
 .product-details-page .container,
@@ -2450,5 +2505,161 @@ body::-webkit-scrollbar-thumb:hover {
 
   .related-products .product-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*-----------------------------------*\
+  #SEARCH FUNCTIONALITY
+\*-----------------------------------*/
+
+/* Search form in header */
+.search-form {
+  position: relative;
+  width: 100%;
+}
+
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--cultured);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  margin-top: 5px;
+}
+
+.search-results-dropdown.active {
+  display: block;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--cultured);
+  text-decoration: none;
+  transition: var(--transition-timing);
+}
+
+.search-result-item:hover {
+  background: rgba(95, 168, 86, 0.05);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  background: var(--cultured);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-result-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.search-result-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.search-result-title {
+  font-size: var(--fs-7);
+  font-weight: var(--weight-600);
+  color: var(--secondary-color);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-result-category {
+  font-size: var(--fs-10);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: var(--weight-500);
+  margin-bottom: 2px;
+}
+
+.search-result-price {
+  font-size: var(--fs-7);
+  font-weight: var(--weight-700);
+  color: var(--primary-color);
+}
+
+.search-result-old-price {
+  font-size: var(--fs-9);
+  color: var(--sonic-silver);
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+.search-view-all {
+  padding: 12px 15px;
+  border-top: 1px solid var(--cultured);
+  text-align: center;
+}
+
+.search-view-all a {
+  color: var(--primary-color);
+  font-size: var(--fs-7);
+  font-weight: var(--weight-600);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.search-view-all a:hover {
+  text-decoration: underline;
+}
+
+.search-no-results {
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--sonic-silver);
+}
+
+.search-no-results ion-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: var(--cultured);
+}
+
+.search-suggestion {
+  font-size: var(--fs-9);
+  margin-top: 10px;
+  color: var(--spanish-gray);
+}
+
+/* Mobile adjustments for search */
+@media (max-width: 768px) {
+  .search-results-dropdown {
+    position: fixed;
+    top: 70px;
+    left: 15px;
+    right: 15px;
+    max-height: 300px;
+  }
+  
+  .header-search-container {
+    position: static;
   }
 }
