@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JL Store - Shopping Cart</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div id="header-container">
+    <!-- Header will be inserted by JavaScript from the main site -->
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.png" alt="JL Store logo" width="40" height="40">
+        </a>
+        <div class="header-actions">
+          <button class="btn-user" aria-label="User">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <a href="cart.html" class="btn-cart" aria-label="Cart">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="cart-count">4</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="product-container">
+      <div class="container">
+        <!-- Cart Page Content -->
+        <h1 class="title">Your Shopping Cart <span class="cart-count">4</span></h1>
+        
+        <div class="cart-container">
+          <!-- Cart Items Section -->
+          <div class="cart-items">
+            <div class="cart-title">
+              <span>Items in your cart</span>
+              <button class="clear-cart-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+                Clear Cart
+              </button>
+            </div>
+            
+            <!-- iPhone 17 -->
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <img src="./assets/images/IPHONE/nav_iphone_17.png" alt="iPhone 17">
+              </div>
+              <div class="cart-item-details">
+                <h3 class="cart-item-name">iPhone 17</h3>
+                <div class="product-specs">
+                  <span>128GB Storage</span>
+                  <span>Midnight Black</span>
+                </div>
+                <div class="price-box">
+                  <span class="cart-item-price">₱69,990</span>
+                  <span class="cart-item-old-price">₱74,990</span>
+                </div>
+                <div class="cart-item-controls">
+                  <span class="quantity-display">Quantity: 1</span>
+                  <button class="remove-btn">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- iPad Pro -->
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <img src="./assets/images/IPAD/ipad_pro.jpg" alt="iPad Pro">
+              </div>
+              <div class="cart-item-details">
+                <h3 class="cart-item-name">iPad Pro 12.9-inch</h3>
+                <div class="product-specs">
+                  <span>M4 Chip</span>
+                  <span>256GB Storage</span>
+                </div>
+                <div class="price-box">
+                  <span class="cart-item-price">₱65,990</span>
+                  <span class="cart-item-old-price">₱69,990</span>
+                </div>
+                <div class="cart-item-controls">
+                  <span class="quantity-display">Quantity: 1</span>
+                  <button class="remove-btn">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- MacBook Pro -->
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <img src="./assets/images/MAC/Air/mac-card-macbookpro-14-16.jpg" alt="MacBook Pro">
+              </div>
+              <div class="cart-item-details">
+                <h3 class="cart-item-name">MacBook Pro 16-inch</h3>
+                <div class="product-specs">
+                  <span>M3 Max Chip</span>
+                  <span>1TB SSD</span>
+                </div>
+                <div class="price-box">
+                  <span class="cart-item-price">₱105,990</span>
+                  <span class="cart-item-old-price">₱112,990</span>
+                </div>
+                <div class="cart-item-controls">
+                  <span class="quantity-display">Quantity: 1</span>
+                  <button class="remove-btn">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- MacBook Air -->
+            <div class="cart-item">
+              <div class="cart-item-img">
+                <img src="./assets/images/MAC/Pro/mba13-midnight.jpg" alt="MacBook Air">
+              </div>
+              <div class="cart-item-details">
+                <h3 class="cart-item-name">MacBook Air M3</h3>
+                <div class="product-specs">
+                  <span>13-inch Display</span>
+                  <span>512GB Storage</span>
+                </div>
+                <div class="price-box">
+                  <span class="cart-item-price">₱62,990</span>
+                  <span class="cart-item-old-price">₱67,990</span>
+                </div>
+                <div class="cart-item-controls">
+                  <span class="quantity-display">Quantity: 1</span>
+                  <button class="remove-btn">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Order Summary Section -->
+          <div class="cart-summary">
+            <h2 class="cart-title">Order Summary</h2>
+            
+            <div class="summary-row">
+              <span class="summary-label">Subtotal (4 items)</span>
+              <span class="summary-value">₱303,960</span>
+            </div>
+            
+            <div class="summary-row">
+              <span class="summary-label">Shipping</span>
+              <span class="summary-value" style="color: #5fa856;">FREE</span>
+            </div>
+            
+            <div class="summary-row">
+              <span class="summary-label">Tax</span>
+              <span class="summary-value">₱24,317</span>
+            </div>
+            
+            <div class="summary-row">
+              <span class="summary-label">Discount</span>
+              <span class="summary-value" style="color: #5fa856;">-₱15,000</span>
+            </div>
+            
+            <div class="summary-row total">
+              <span class="summary-label">Total</span>
+              <span class="summary-value">₱313,277</span>
+            </div>
+            
+            <button class="checkout-btn">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              Proceed to Checkout
+            </button>
+            
+            <div class="payment-methods">
+              <h4>Secure Payment</h4>
+              <div class="payment-icons">
+                <div class="payment-icon">VISA</div>
+                <div class="payment-icon">MC</div>
+                <div class="payment-icon">AMEX</div>
+                <div class="payment-icon">PP</div>
+              </div>
+              <p style="font-size: 12px; color: #999; margin-top: 10px;">Your payment information is encrypted and secure.</p>
+            </div>
+            
+            <div style="margin-top: 25px; font-size: 14px; color: #666;">
+              <p style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                <ion-icon name="shield-checkmark-outline" style="color: #5fa856;"></ion-icon>
+                <span>30-day return policy</span>
+              </p>
+              <p style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                <ion-icon name="car-outline"></ion-icon>
+                <span>Free shipping on all orders</span>
+              </p>
+              <p style="display: flex; align-items: center; gap: 8px;">
+                <ion-icon name="headset-outline"></ion-icon>
+                <span>24/7 customer support</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Continue Shopping Section -->
+        <div class="continue-shopping-container">
+          <a href="index.html" class="continue-shopping">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            Continue Shopping
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-container">
+    <!-- Footer will be inserted by JavaScript from the main site -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo.png" alt="JL Store logo" width="40" height="40">
+          </a>
+          <p class="footer-text">Premium Apple products and accessories at competitive prices.</p>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2023 JL Store. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/cart.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
